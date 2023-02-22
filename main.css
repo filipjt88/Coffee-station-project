@@ -1,5 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+header {
+    background: url("https://wallpaper.dog/large/20496049.jpg");
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+:is(header, h2, h1, .btn) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+:is(header) h2 {
+    color: rgb(21, 174, 21);
+    font-size: 3rem;
+    font-family: 'Kalam', cursive;
+    text-transform: capitalize;
+}
+
+:is(header) h1 {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+:is(header) button {
+    padding: 20px 60px;
+    border: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bolder;
+    outline: 2px solid rgb(21, 174, 21);
+    outline-offset: 5px;
+    background-color: rgb(21, 174, 21);
+    letter-spacing: 3px;
+    transition: all 1s linear;
+}
+
+header button {
+    margin-top: 20px;
+}
+
+header button:hover {
+    background-color: #ddd;
+    color: rgb(21, 174, 21);
+}
+
+.bars {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    color: rgb(21, 174, 21);
+}
+
+.fa-bars {
+    font-size: 3rem;
 }
