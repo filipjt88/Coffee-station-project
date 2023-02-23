@@ -4,16 +4,24 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
 }
 
+:root {
+    --light: #f1f5f8;
+    --green: #678e3e;
+}
+
+
 header {
-    background: url("https://wallpaper.dog/large/20496049.jpg");
+    background: url("img/coffee.jpg");
     height: 100vh;
     width: 100%;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    border-bottom: 5px solid var(--green);
 }
 
 :is(header, h2, h1, .btn) {
@@ -31,40 +39,151 @@ header {
 }
 
 :is(header) h1 {
-    color: #fff;
+    color: var(--light);
     text-transform: uppercase;
-    font-weight: bolder;
+    letter-spacing: 5px;
+    text-shadow: 0 0 8px var(--light);
 }
 
+
 :is(header) button {
-    padding: 20px 60px;
+    padding: 10px 40px;
     border: none;
     text-transform: uppercase;
-    color: #fff;
+    color: var(--light);
     font-weight: bolder;
-    outline: 2px solid rgb(21, 174, 21);
+    outline: 2px solid var(--green);
     outline-offset: 5px;
-    background-color: rgb(21, 174, 21);
+    background-color: var(--green);
     letter-spacing: 3px;
     transition: all 1s linear;
 }
 
 header button {
     margin-top: 20px;
+    font-size: 1.2rem;
 }
 
 header button:hover {
-    background-color: #ddd;
-    color: rgb(21, 174, 21);
+    background-color: var(--light);
+    color: var(--green);
 }
 
 .bars {
     position: absolute;
     left: 5%;
     top: 5%;
-    color: rgb(21, 174, 21);
+    color: var(--green);
 }
 
 .fa-bars {
     font-size: 3rem;
+    cursor: pointer;
+}
+
+/* :is(.row, section) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+} */
+
+.sidebar {
+    display: flex;
+}
+
+
+section .col-md-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px;
+    transition: all .4s ease;
+    background-color: var(--light);
+}
+
+section .col-md-3:hover {
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 3px solid var(--green);
+}
+
+section .col-md-3 span {
+    font-size: 1.5rem;
+}
+
+section .col-md-3 i {
+    font-size: 2rem;
+    color: var(--green);
+}
+
+.row .col-md-5 {
+    margin-top: 50px;
+}
+
+.row .col-md-4 img {
+    height: 400px;
+    width: 85%;
+    outline: 5px solid var(--green);
+    outline-offset: 5px;
+}
+
+.row:nth-child(3) {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.about p {
+    width: 60%;
+    text-align: left;
+}
+
+.about button {
+    padding: 5px 40px;
+    text-transform: uppercase;
+    background-color: var(--green);
+    color: var(--light);
+    letter-spacing: 2px;
+    font-weight: 500;
+    border: none;
+    -webkit-box-shadow: 7px 10px 5px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 7px 10px 5px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 7px 10px 5px -5px rgba(0, 0, 0, 0.75);
+}
+
+.our-products {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.our-products .col-md-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.our-products img {
+    height: 200px;
+    object-fit: contain;
+    outline: 3px solid var(--green);
+    outline-offset: 10px;
+    border-radius: 5px;
+}
+
+
+.image span {
+    font-size: 1.2rem;
 }
