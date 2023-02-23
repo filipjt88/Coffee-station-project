@@ -21,7 +21,7 @@ header {
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    border-bottom: 5px solid var(--green);
+    border-bottom: 5px solid rgba(123, 678, 076, 0.75);
 }
 
 :is(header, h2, h1, .btn) {
@@ -81,15 +81,16 @@ header button:hover {
     cursor: pointer;
 }
 
-/* :is(.row, section) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-} */
-
 .sidebar {
     display: flex;
+}
+
+.sidebar .col-md-3 {
+    background-color: var(--light);
+}
+
+.sidebar .col-md-3:hover {
+    background-color: #fff;
 }
 
 
@@ -101,10 +102,9 @@ section .col-md-3 {
     flex-wrap: wrap;
     padding: 40px;
     transition: all .4s ease;
-    background-color: var(--light);
 }
 
-section .col-md-3:hover {
+.sidebar .col-md-3:hover {
     cursor: pointer;
     background-color: #fff;
     border-bottom: 3px solid var(--green);
@@ -131,7 +131,7 @@ section .col-md-3 i {
 }
 
 .row:nth-child(3) {
-    margin-top: 50px;
+    margin-top: 100px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -167,23 +167,153 @@ section .col-md-3 i {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    margin-top: 100px;
+    background-color: var(--light);
+    padding: 100px;
 }
 
 .our-products .col-md-4 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 15%;
 }
 
 .our-products img {
     height: 200px;
     object-fit: contain;
-    outline: 3px solid var(--green);
-    outline-offset: 10px;
     border-radius: 5px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    transition: all 1s linear;
 }
 
+.our-products img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
 
 .image span {
     font-size: 1.2rem;
+}
+
+.our-products button {
+    padding: 5px 30px;
+    text-transform: uppercase;
+    background-color: var(--green);
+    color: var(--light);
+    letter-spacing: 2px;
+    font-weight: 500;
+    border: none;
+    -webkit-box-shadow: 7px 10px 5px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 7px 10px 5px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 7px 10px 5px -5px rgba(0, 0, 0, 0.75);
+}
+
+.explore {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.our-services {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    text-align: center;
+}
+
+.explore h1:nth-child(2):after {
+    content: "";
+    display: block;
+    height: 5px;
+    width: 200px;
+    background-color: var(--green);
+    margin: 10px auto;
+}
+
+.card {
+    background-color: var(--light);
+    -webkit-box-shadow: 7px 10px 5px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 7px 10px 5px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 7px 10px 5px -5px rgba(0, 0, 0, 0.75);
+    transition: all 1s linear;
+}
+
+.card:hover {
+    /* transform: translateY(-100px); */
+    transform: translateY(-50px);
+}
+
+.card img {
+    width: 100%;
+    max-height: 250px;
+    border-radius: 10px;
+}
+
+.card button {
+    padding: 5px 40px;
+    text-transform: uppercase;
+    background-color: var(--green);
+    color: var(--light);
+    letter-spacing: 2px;
+    font-weight: 500;
+    border: none;
+    -webkit-box-shadow: 7px 10px 5px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 7px 10px 5px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 7px 10px 5px -5px rgba(0, 0, 0, 0.75);
+}
+
+.card button:hover {
+    background-color: var(--light);
+    color: var(--green);
+}
+
+.contact {
+    margin-top: 100px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.contact-form button {
+    padding: 5px 30px;
+    text-transform: uppercase;
+    background-color: var(--green);
+    color: var(--light);
+    letter-spacing: 2px;
+    font-weight: 500;
+    border: none;
+    -webkit-box-shadow: 7px 10px 5px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 7px 10px 5px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 7px 10px 5px -5px rgba(0, 0, 0, 0.75);
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background-color: #000;
+    color: var(--light);
+    margin-top: 50px;
+}
+
+footer i {
+    font-size: 1.5rem;
+    margin: 10px;
+}
+
+footer p {
+    font-size: 1.5rem;
 }
