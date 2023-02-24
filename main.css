@@ -422,6 +422,15 @@ footer p {
 
 /* Responsive design */
 @media(max-width:767px) {
+    .container-fluid {
+        width: auto;
+    }
+
+    header h2 {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
     .sidebar {
         display: flex;
         justify-content: center;
@@ -471,13 +480,14 @@ footer p {
         margin-top: 100px;
     }
 
-    .our-products img {
-        height: auto;
-        object-fit: contain;
-        border-radius: 5px;
-        margin-bottom: 50px;
-        object-fit: cover;
-        transition: all 1s linear;
+    footer p {
+        font-size: 1rem;
+    }
+}
+
+@media(min-width:767px) and (max-width:1308px) {
+    .our-products {
+        display: flex;
     }
 }
 
