@@ -552,8 +552,8 @@ footer p {
     }
 
     .nav-items li a {
-        font-size: .8rem;
-        text-transform: lowercase;
+        font-size: 1rem;
+        text-transform: uppercase;
     }
 
     .sidebar {
