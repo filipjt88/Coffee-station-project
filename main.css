@@ -31,6 +31,14 @@ header {
     border-bottom: 5px solid rgba(123, 678, 076, 0.75);
 }
 
+header h1 {
+    animation: slideFromLeft 6s ease-in-out;
+}
+
+header h2 {
+    animation: slideFromRight 6s ease-in-out;
+}
+
 :is(header, h2, h1, .btn) {
     display: flex;
     justify-content: center;
@@ -101,6 +109,50 @@ header button:hover {
 
     100% {
         transform: scale(1);
+    }
+}
+
+@keyframes slideFromRight {
+    0% {
+        transform: translate(500px);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(-200px);
+        opacity: 0.5;
+    }
+
+    75% {
+        transform: translateX(50px);
+        opacity: .75;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromLeft {
+    0% {
+        transform: translate(-500px);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(200px);
+        opacity: .5;
+    }
+
+    75% {
+        transform: translateX(-50px);
+        opacity: .75;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
     }
 }
 
@@ -497,6 +549,11 @@ footer p {
     header h2 {
         text-align: center;
         font-size: 1.5rem;
+    }
+
+    .nav-items li a {
+        font-size: .8rem;
+        text-transform: lowercase;
     }
 
     .sidebar {
