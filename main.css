@@ -93,7 +93,7 @@ header button:hover {
 }
 
 .fa-bars {
-    font-size: 3rem;
+    font-size: 2.5rem;
     cursor: pointer;
 }
 
@@ -551,9 +551,13 @@ footer p {
         font-size: 1.5rem;
     }
 
-    .nav-items li a {
-        font-size: 1rem;
-        text-transform: uppercase;
+    .navbar {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-close {
+        margin-right: 10px;
     }
 
     .sidebar {
@@ -579,8 +583,15 @@ footer p {
     }
 
     .our-products {
-        display: block;
+        display: flex;
         margin: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .our-products img {
+        height: 100%;
     }
 
     .our-products .col-md-4 {
@@ -589,7 +600,19 @@ footer p {
     }
 
     .our-services {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .our-services .card {
+        width: 75%;
+    }
+
+    .contact-form {
+        width: 75%;
+        margin: auto;
     }
 
     .contact {
@@ -610,10 +633,5 @@ footer p {
     }
 }
 
-@media(min-width:767px) and (max-width:1308px) {
-    .our-products {
-        display: flex;
-    }
-}
 
 /* End of responsive design */
