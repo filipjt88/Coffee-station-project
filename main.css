@@ -77,10 +77,11 @@ header button:hover {
 }
 
 .bars {
-    position: absolute;
+    position: fixed;
     left: 5%;
     top: 5%;
     color: var(--green);
+    animation: bounce 2s ease infinite;
 }
 
 .fa-bars {
@@ -88,10 +89,81 @@ header button:hover {
     cursor: pointer;
 }
 
+/* Animation */
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* end of animation */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 20%;
+    background: var(--light);
+    z-index: 1;
+    transform: translateX(-100%);
+    box-shadow: 0 0 8px #000;
+    border-radius: 0 20px 20px 0;
+    transition: all .5s linear;
+}
+
+.showNav {
+    transform: translate(0);
+}
+
+.nav-close {
+    position: fixed;
+    top: 0;
+    right: 10px;
+    bottom: 0;
+    font-size: 2rem;
+    color: var(--green);
+    cursor: pointer;
+    transform: translateX(0);
+}
+
+
+.nav-items {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+
+nav ul li {
+    text-transform: uppercase;
+    font-size: 2rem;
+    list-style: none;
+    margin-top: 50px;
+    transition: .5s all linear;
+}
+
+nav ul li:hover {
+    transform: translateX(-20px);
+    background-color: var(--green);
+    color: var(--light);
+    border-left: 3px solid #000;
+}
+
 /* End of header */
 
 /* Sidebar */
-
 .sidebar {
     display: flex;
     justify-content: center;
@@ -106,7 +178,6 @@ header button:hover {
 .sidebar .col-md-3:hover {
     background-color: #fff;
 }
-
 
 section .col-md-3 {
     display: flex;
@@ -128,7 +199,6 @@ section .col-md-3 i {
     color: var(--green);
 }
 
-
 .sidebar .col-md-3:hover {
     cursor: pointer;
     background-color: #fff;
@@ -148,7 +218,6 @@ section .col-md-3 i {
 }
 
 .row:nth-child(3) {
-    margin-top: 100px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -268,7 +337,6 @@ section .col-md-3 i {
     font-weight: bold;
     letter-spacing: 2px;
 }
-
 
 .explore h1:nth-child(1):after {
     content: "";
