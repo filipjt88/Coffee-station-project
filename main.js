@@ -1,5 +1,5 @@
-let bars                = document.querySelector(".bars");
-let navbar            = document.querySelector("#navbar");
+let bars         = document.querySelector(".bars");
+let navbar     = document.querySelector("#navbar");
 let navClose        = document.querySelector(".nav-close");
 
 
