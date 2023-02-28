@@ -1,7 +1,6 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 
-
 * {
     margin: 0;
     padding: 0;
@@ -16,6 +15,11 @@
 
 body {
     font-family: 'Abel', sans-serif;
+}
+
+
+.container-fluid {
+    overflow: hidden;
 }
 
 
@@ -187,7 +191,6 @@ header button:hover {
     cursor: pointer;
     transform: translateX(0);
 }
-
 
 .nav-items {
     position: fixed;
@@ -541,11 +544,22 @@ footer p {
 /* End of footer */
 
 /* Responsive design */
-@media(max-width:767px) {
-    .container-fluid {
-        width: auto;
+
+@media(min-width:767px) and (max-width:1500px) {
+    .row .col-md-4 img {
+        width: 100%;
+        height: 250px;
     }
 
+    .our-services {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+@media(max-width:767px) {
     header h2 {
         text-align: center;
         font-size: 1.5rem;
@@ -572,7 +586,7 @@ footer p {
 
     .row .col-md-4 img {
         height: auto;
-        width: 95%;
+        width: 80%;
     }
 
     .about {
@@ -607,11 +621,11 @@ footer p {
     }
 
     .our-services .card {
-        width: 75%;
+        width: 90%;
     }
 
     .contact-form {
-        width: 75%;
+        width: 100%;
         margin: auto;
     }
 
@@ -632,6 +646,17 @@ footer p {
         font-size: 1rem;
     }
 }
+
+@media(max-width:500px) {
+    .contact-form {
+        width: 100%;
+    }
+
+    .row .col-md-4 img {
+        width: 80%;
+    }
+}
+
 
 
 /* End of responsive design */
